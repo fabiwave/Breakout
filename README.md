@@ -1,1 +1,1 @@
-# CC3002-1-breakout
+# CC3002-breakout
