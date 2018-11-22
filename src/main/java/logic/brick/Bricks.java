@@ -1,6 +1,7 @@
 package logic.brick;
 
 import logic.level.Level;
+import logic.level.Levels;
 
 import java.util.Observable;
 
@@ -10,7 +11,7 @@ public abstract class Bricks extends Observable implements Brick{
     protected int totalHits;
 
     public Bricks(Level level){
-        this.addObserver(level);
+        this.addObserver((Levels) level);
     }
 
     public void hit(){
@@ -18,6 +19,8 @@ public abstract class Bricks extends Observable implements Brick{
             int aux = this.totalHits - 1;
             this.totalHits = aux;
         }
+        this.setChanged();
+        this.notifyObservers();
 
     }
 

@@ -15,6 +15,7 @@ public interface Level {
      *
      * @return the table's name
      */
+
     String getName();
 
     /**
