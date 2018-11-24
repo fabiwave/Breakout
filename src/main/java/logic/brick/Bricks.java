@@ -5,34 +5,38 @@ import logic.level.Levels;
 
 import java.util.Observable;
 
-public abstract class Bricks extends Observable implements Brick{
+public abstract class Bricks extends Observable implements Brick {
 
-    protected int brickScore;
-    protected int totalHits;
+    int brickScore;
+    int totalHits;
 
-    public Bricks(Level level){
+    Bricks(Level level) {
         this.addObserver((Levels) level);
     }
 
-    public void hit(){
-        if (!isDestroyed()){
-            int aux = this.totalHits - 1;
-            this.totalHits = aux;
+    public void hit() {
+        if (!isDestroyed()) {
+            this.totalHits -= 1;
         }
         this.setChanged();
         this.notifyObservers();
 
     }
 
-    public boolean isDestroyed(){
+    public boolean isDestroyed() {
         return (this.totalHits == 0);
     }
 
-    public int getScore(){
+    public int getScore() {
         return this.brickScore;
     }
 
-    public int remainingHits(){
+    public int remainingHits() {
         return totalHits;
     }
+
+    public void effect(Level level) {
+        level.addScore(this.brickScore);
+    }
 }
+

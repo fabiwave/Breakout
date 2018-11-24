@@ -1,8 +1,7 @@
 package logic.level;
 
-import logic.brick.Brick;
-import logic.brick.GlassBrick;
-import logic.brick.WoodenBrick;
+import com.sun.xml.internal.bind.v2.TODO;
+import logic.brick.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +40,16 @@ public class Levels extends Observable implements Level, Observer {
 
             this.maxPoints += aBrick.getScore();
         }
-        // TODO Crear los MetalBricks
+
+        for (int i = 0 ; i < numberOfBricks; i++) {
+            double randomGenerator = random.nextDouble();
+            Brick aBrick;
+
+            if (randomGenerator <= probOfMetal) {
+                aBrick = new MetalBrick(this);
+                brickList.add(aBrick);
+            }
+        }
 
         this.numberOfBricks = this.brickList.size();
         this.isPlayable = (this.numberOfBricks > 0);
@@ -107,4 +115,14 @@ public class Levels extends Observable implements Level, Observer {
     public void setNextLevel(Level level) {
         this.nextLevel = level;
     }
+
+    public void addBall(){
+        //TODO Implementar
+    }
+
+    public void addScore(int score){
+        this.currentPoints += score;
+        //Todo implementar
+    }
+
 }

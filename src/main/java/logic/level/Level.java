@@ -7,11 +7,12 @@ import java.util.List;
 /**
  * Interface that represents the basics of a level to be played on.
  *
- * @author Juan-Pablo Silva
+ * @author Fabiola Rivera
  */
 public interface Level {
     /**
-     * Gets the level's name. Each level must have a name.
+     * Gets the level's name, number of Bricks, prob of GlassBrick, prob of MetalBrick and a seed
+     *
      *
      * @return the table's name
      */
@@ -73,4 +74,9 @@ public interface Level {
      * @param level the next level of a level object
      */
     void setNextLevel(Level level);
+
+    // TODO Javadoc
+    void addScore(int Score);
+
+    void addBall();
 }

@@ -3,12 +3,16 @@ package controller;
 /**
  * Game logic controller class.
  *
- * @author Juan-Pablo Silva
+ * @author Fabiola Rivera
  */
+
 public class Game {
 
-    public Game(int balls) {
+    private int myBalls;
 
+    public Game(int balls) {
+        this.myBalls = balls;
+        // TODO more
     }
 
     /**

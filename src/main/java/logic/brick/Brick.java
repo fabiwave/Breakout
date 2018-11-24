@@ -2,16 +2,16 @@ package logic.brick;
 
 /**
  * Interface that represents a brick object.
- * <p>
  * All bricks should implement this interface.
  *
- * @author Juan-Pablo Silva
+ * @author Fabiola Rivera
  */
+
 public interface Brick {
 
     /**
      * Defines that a brick has been hit.
-     * Implementations should consider the events that a hit to a brick can trigger.
+     * Notifies to the observers that a brick has been hit
      */
     void hit();
 
