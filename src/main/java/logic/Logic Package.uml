@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>logic</OriginalElement>
+  <nodes>
+    <node x="480.49999999999994" y="0.0">logic.brick.Brick</node>
+    <node x="308.99999999999994" y="448.0">logic.brick.MetalBrick</node>
+    <node x="0.0" y="366.0">logic.level.Levels</node>
+    <node x="678.0" y="459.5">logic.brick.GlassBrick</node>
+    <node x="480.49999999999994" y="190.0">logic.brick.Bricks</node>
+    <node x="484.99999999999994" y="459.5">logic.brick.WoodenBrick</node>
+    <node x="25.5" y="0.0">logic.level.Level</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="logic.brick.Bricks" target="logic.brick.Brick">
+      <point x="0.0" y="-104.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="logic.brick.GlassBrick" target="logic.brick.Bricks">
+      <point x="0.0" y="-26.0" />
+      <point x="755.0" y="423.0" />
+      <point x="632.1666666666665" y="423.0" />
+      <point x="60.66666666666663" y="104.0" />
+    </edge>
+    <edge source="logic.brick.MetalBrick" target="logic.brick.Bricks">
+      <point x="0.0" y="-37.5" />
+      <point x="386.99999999999994" y="423.0" />
+      <point x="510.8333333333333" y="423.0" />
+      <point x="-60.66666666666663" y="104.0" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.level.Level">
+      <point x="0.0" y="-258.0" />
+      <point x="0.0" y="158.0" />
+    </edge>
+    <edge source="logic.brick.WoodenBrick" target="logic.brick.Bricks">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="104.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="414.0000000000001" y="255.99999999999994" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
