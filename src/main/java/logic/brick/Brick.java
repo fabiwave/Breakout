@@ -1,5 +1,7 @@
 package logic.brick;
 
+import logic.level.Level;
+
 /**
  * Interface that represents a brick object.
  * All bricks should implement this interface.
@@ -35,4 +37,7 @@ public interface Brick {
      * @return the remaining hits to destroy de brick
      */
     int remainingHits();
+
+    //todo javadoc
+    void effect(Level level);
 }

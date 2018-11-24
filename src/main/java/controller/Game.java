@@ -27,7 +27,6 @@ public class Game implements Observer {
         this.myBalls = balls;
         this.currentLevel = new Levels("Invalid Level", 0, 0.0, 0.0, 0);
         ((Levels) this.currentLevel).addObserver(this);
-        // TODO more
     }
 
     /**
@@ -67,6 +66,9 @@ public class Game implements Observer {
         if (this.currentLevel.hasNextLevel()) {
             setCurrentLevel(this.currentLevel.getNextLevel());
         } else {
+            if (this.myBalls > 0) {
+                this.winner = true;
+            }
             setCurrentLevel(new Levels("Game over", 0, 0.0, 0.0, 0));
         }
     }
@@ -108,6 +110,11 @@ public class Game implements Observer {
     public int dropBall() {
         if (this.myBalls > 0) {
             this.myBalls -= 1;
+
+            if (this.myBalls == 0) {
+                this.currentLevel.setNextLevel(null);
+                this.goNextLevel();
+            }
         }
         return this.myBalls;
     }
@@ -118,6 +125,12 @@ public class Game implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        // TODO implementar
+        int action = ((int) arg);
+
+        if (action == 0) {
+            this.goNextLevel();
+        } else if (action == 1) {
+            this.myBalls += 1;
+        }
     }
 }

@@ -1,6 +1,5 @@
 package logic.level;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import logic.brick.*;
 
 import java.util.ArrayList;
@@ -10,8 +9,6 @@ import java.util.Observer;
 import java.util.Random;
 
 public class Levels extends Observable implements Level, Observer {
-
-    // TODO Cosas de Observable
 
     private String levelName;
     private int numberOfBricks;
@@ -28,7 +25,7 @@ public class Levels extends Observable implements Level, Observer {
 
         for (int i = 0; i < numberOfBricks; i++) {
             double randomGenerator = random.nextDouble();
-            Brick aBrick;
+            Bricks aBrick;
 
             if (randomGenerator > probOfGlass) {
                 aBrick = new WoodenBrick(this);
@@ -38,11 +35,11 @@ public class Levels extends Observable implements Level, Observer {
                 brickList.add(aBrick);
             }
 
-            ((Bricks) aBrick).addObserver(this);
+            aBrick.addObserver(this);
             this.maxPoints += aBrick.getScore();
         }
 
-        for (int i = 0 ; i < numberOfBricks; i++) {
+        for (int i = 0; i < numberOfBricks; i++) {
             double randomGenerator = random.nextDouble();
             MetalBrick aBrick;
 
@@ -60,7 +57,13 @@ public class Levels extends Observable implements Level, Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        // TODO Implementar
+        Brick brick = ((Bricks) o);
+        brick.effect(this);
+
+        if (this.currentPoints == this.maxPoints) {
+            this.setChanged();
+            this.notifyObservers(0);
+        }
     }
 
     @Override
@@ -90,11 +93,7 @@ public class Levels extends Observable implements Level, Observer {
 
     @Override
     public boolean hasNextLevel() {
-        if (this.nextLevel == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return this.nextLevel != null;
     }
 
     @Override
@@ -118,20 +117,20 @@ public class Levels extends Observable implements Level, Observer {
         this.nextLevel = level;
     }
 
-    public void addBall(){
-        //TODO Implementar
+    public void addBall() {
+        this.setChanged();
+        this.notifyObservers(1);
     }
 
-    public void addScore(int score){
+    public void addScore(int score) {
         this.currentPoints += score;
-        //Todo implementar
     }
 
     @Override
     public int getNumberOfBricksLeft() {
         int aliveBricks = 0;
-        for (int i = 0; i < this.brickList.size(); i++){
-            if (!brickList.get(i).isDestroyed()){
+        for (Brick aBrickList : this.brickList) {
+            if (!aBrickList.isDestroyed()) {
                 aliveBricks++;
             }
         }

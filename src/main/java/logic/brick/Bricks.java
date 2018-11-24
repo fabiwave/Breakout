@@ -17,10 +17,12 @@ public abstract class Bricks extends Observable implements Brick {
     public void hit() {
         if (!isDestroyed()) {
             this.totalHits -= 1;
-        }
-        this.setChanged();
-        this.notifyObservers();
 
+            if (this.isDestroyed()) {
+                this.setChanged();
+                this.notifyObservers();
+            }
+        }
     }
 
     public boolean isDestroyed() {

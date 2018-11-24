@@ -46,7 +46,7 @@ public class HomeworkTwoFacade {
      * @see Level
      */
     public Level newLevelWithBricksNoMetal(String name, int numberOfBricks, double probOfGlass, int seed) {
-        return this.game.newLevelWithBricksNoMetal(name,numberOfBricks,probOfGlass,seed);
+        return this.game.newLevelWithBricksNoMetal(name, numberOfBricks, probOfGlass, seed);
     }
 
     /**
