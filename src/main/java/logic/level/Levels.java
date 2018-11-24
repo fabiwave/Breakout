@@ -38,16 +38,18 @@ public class Levels extends Observable implements Level, Observer {
                 brickList.add(aBrick);
             }
 
+            ((Bricks) aBrick).addObserver(this);
             this.maxPoints += aBrick.getScore();
         }
 
         for (int i = 0 ; i < numberOfBricks; i++) {
             double randomGenerator = random.nextDouble();
-            Brick aBrick;
+            MetalBrick aBrick;
 
             if (randomGenerator <= probOfMetal) {
                 aBrick = new MetalBrick(this);
                 brickList.add(aBrick);
+                aBrick.addObserver(this);
             }
         }
 
@@ -125,4 +127,19 @@ public class Levels extends Observable implements Level, Observer {
         //Todo implementar
     }
 
+    @Override
+    public int getNumberOfBricksLeft() {
+        int aliveBricks = 0;
+        for (int i = 0; i < this.brickList.size(); i++){
+            if (!brickList.get(i).isDestroyed()){
+                aliveBricks++;
+            }
+        }
+        return aliveBricks;
+    }
+
+    @Override
+    public int getCurrentPoints() {
+        return this.currentPoints;
+    }
 }

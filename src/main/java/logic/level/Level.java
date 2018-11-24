@@ -79,4 +79,8 @@ public interface Level {
     void addScore(int Score);
 
     void addBall();
+
+    int getNumberOfBricksLeft();
+
+    int getCurrentPoints();
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Facade class to expose the logic of the game to a GUI in the upcoming homework.
-
+ *
  * @author Fabiola Rivera
  */
 
@@ -32,7 +32,7 @@ public class HomeworkTwoFacade {
      * @see Level
      */
     public Level newLevelWithBricksFull(String name, int numberOfBricks, double probOfGlass, double probOfMetal, int seed) {
-        return null;
+        return this.game.newLevelWithBricksFull(name, numberOfBricks, probOfGlass, probOfMetal, seed);
     }
 
     /**
@@ -46,7 +46,7 @@ public class HomeworkTwoFacade {
      * @see Level
      */
     public Level newLevelWithBricksNoMetal(String name, int numberOfBricks, double probOfGlass, int seed) {
-        return null;
+        return this.game.newLevelWithBricksNoMetal(name,numberOfBricks,probOfGlass,seed);
     }
 
     /**
@@ -55,7 +55,7 @@ public class HomeworkTwoFacade {
      * @return the number of intact bricks in the current level
      */
     public int numberOfBricks() {
-        return 0;
+        return game.numberOfBricks();
     }
 
     /**
@@ -64,7 +64,7 @@ public class HomeworkTwoFacade {
      * @return the list of bricks
      */
     public List<Brick> getBricks() {
-        return null;
+        return game.getBricks();
     }
 
     /**
@@ -73,14 +73,14 @@ public class HomeworkTwoFacade {
      * @return true if the current level's next level is playable, false otherwise
      */
     public boolean hasNextLevel() {
-        return false;
+        return game.hasNextLevel();
     }
 
     /**
      * Pass to the next level of the current {@link Level}. Ignores all conditions and skip to the next level.
      */
     public void goNextLevel() {
-
+        game.goNextLevel();
     }
 
     /**
@@ -89,7 +89,7 @@ public class HomeworkTwoFacade {
      * @return true if the current level is playable, false otherwise
      */
     public boolean hasCurrentLevel() {
-        return false;
+        return game.hasCurrentLevel();
     }
 
     /**
@@ -98,7 +98,7 @@ public class HomeworkTwoFacade {
      * @return the name of the current level
      */
     public String getLevelName() {
-        return null;
+        return game.getLevelName();
     }
 
     /**
@@ -108,7 +108,7 @@ public class HomeworkTwoFacade {
      * @see Level
      */
     public Level getCurrentLevel() {
-        return null;
+        return game.getCurrentLevel();
     }
 
     /**
@@ -118,7 +118,7 @@ public class HomeworkTwoFacade {
      * @see Level
      */
     public void setCurrentLevel(Level level) {
-
+        game.setCurrentLevel(level);
     }
 
     /**
@@ -127,7 +127,7 @@ public class HomeworkTwoFacade {
      * @param level the level to be added
      */
     public void addPlayingLevel(Level level) {
-
+        game.addPlayingLevel(level);
     }
 
     /**
@@ -136,7 +136,7 @@ public class HomeworkTwoFacade {
      * @return the number of points in the current level
      */
     public int getLevelPoints() {
-        return 0;
+        return game.getLevelPoints();
     }
 
     /**
@@ -145,7 +145,7 @@ public class HomeworkTwoFacade {
      * @return the cumulative points
      */
     public int getCurrentPoints() {
-        return 0;
+        return game.getCurrentPoints();
     }
 
     /**
@@ -154,7 +154,7 @@ public class HomeworkTwoFacade {
      * @return the number of available balls
      */
     public int getBallsLeft() {
-        return 0;
+        return game.getBallsLeft();
     }
 
     /**
@@ -163,7 +163,7 @@ public class HomeworkTwoFacade {
      * @return the new number of available balls
      */
     public int dropBall() {
-        return 0;
+        return game.dropBall();
     }
 
     /**
@@ -172,7 +172,7 @@ public class HomeworkTwoFacade {
      * @return true if the game is over, false otherwise
      */
     public boolean isGameOver() {
-        return false;
+        return game.isGameOver();
     }
 
     /**
