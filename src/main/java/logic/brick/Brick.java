@@ -38,6 +38,9 @@ public interface Brick {
      */
     int remainingHits();
 
-    //todo javadoc
+    /**
+     * Apply of the effect of the brick to the level
+     * @param level
+     */
     void effect(Level level);
 }

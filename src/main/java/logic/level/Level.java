@@ -75,12 +75,26 @@ public interface Level {
      */
     void setNextLevel(Level level);
 
-    // TODO Javadoc
+    /**
+     * Adds the score to the current points of the level
+     * @param Score
+     */
     void addScore(int Score);
 
+    /**
+     * Notifies to the observer of a change
+     */
     void addBall();
 
+    /**
+     * Gives the number of brick that has not been destroyed in the current level
+     * @return the number of brick left in a level
+     */
     int getNumberOfBricksLeft();
 
+    /**
+     * Gives the score that the level has
+     * @return the current score
+     */
     int getCurrentPoints();
 }

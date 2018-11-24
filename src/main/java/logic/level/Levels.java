@@ -93,7 +93,10 @@ public class Levels extends Observable implements Level, Observer {
 
     @Override
     public boolean hasNextLevel() {
-        return this.nextLevel != null;
+        if (this.nextLevel != null){
+            return this.nextLevel.isPlayableLevel();
+        }
+        return false;
     }
 
     @Override
