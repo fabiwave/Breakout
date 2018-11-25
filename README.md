@@ -2,9 +2,9 @@
 
 ##
 
-###Descripcion de la implementacion  
+### Descripcion de la implementacion  
 ##### En este codigo esta la implementacion logica del juego Breakout.
-#####Para esto, se implementaron las clases Levels, Game, Brick y HomeworkTwoFacade.  
+##### Para esto, se implementaron las clases Levels, Game, Brick y HomeworkTwoFacade.  
 ##### Cada una de estas se encarga de un aspecto del juego, como es el caso de Bricks, que genera las unidades básicas del juego. Levels implementa otra unidad propia del juego que son los niveles (Ya que sabemos que sin niveles no se puede jugar). Y por ultimo Game que es la unidad más grande que contiene a las otras 2, ya que se asegura de que haya un nivel o no, dependiendo del caso y de que si un nivel es jugable este contenga ladrillos. Y a la vez que se pueda cambiar de nivel y ganar el juego.   
 
 
