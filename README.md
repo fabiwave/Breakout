@@ -16,4 +16,10 @@
 ##### Para este programa es necesario Java 8 y para correr los test necesitas importar JUnit   
 
 ### Parte logica del juego
-##### Esta es la parte logica del juego asi que no corre sola y se espera que para la proxima tarea esta sea la base para la implementacion de la interfaz grafica.  
+##### Esta es la parte logica del juego asi que no corre sola y se espera que para la proxima tarea esta sea la base para la implementacion de la interfaz grafica. 
+
+### Relacionado a los Test
+##### En este projecto solo se encuentra un test, que es para la clase GlassBricks.
+
+### Diagramas UML
+##### Ademas se incluyeron los diagramas UML de cada paquete, por si no se veian en buena calidad en el resumen entregado via U-cursos. 

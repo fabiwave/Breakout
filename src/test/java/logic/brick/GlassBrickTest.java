@@ -20,6 +20,14 @@ public class GlassBrickTest {
 
     @Test
     public void hit() {
+        glass.addObserver(((Levels) level));
+        glass.hit();
+        assertEquals(0, glass.remainingHits());
+        assertTrue(glass.isDestroyed());
+        assertEquals(50, level.getCurrentPoints());
+        glass.hit();
+        assertEquals(0, glass.remainingHits());
+        assertEquals(50, level.getCurrentPoints());
     }
 
     @Test
@@ -27,10 +35,19 @@ public class GlassBrickTest {
         assertFalse(glass.isDestroyed());
     }
 
+    @Test
+    public void getScore() {
+        assertEquals(50, glass.getScore());
+    }
 
     @Test
     public void remainingHits() {
-        assertEquals(glass.totalHits, 1);
+        assertEquals(1, glass.totalHits);
     }
-    
+
+    @Test
+    public void effect() {
+        glass.effect(level);
+        assertEquals(50 ,level.getCurrentPoints());
+    }
 }
