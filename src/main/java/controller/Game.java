@@ -18,13 +18,14 @@ public class Game implements Observer {
 
     private int myBalls;
     private Level currentLevel;
+    private int currentAccumulatedScore = 0;
     private boolean winner;
 
 
     public Game(int balls) {
         this.winner = false;
         this.myBalls = balls;
-        this.currentLevel = new Levels("Invalid Level", 0, 0.0, 0.0, 0);
+        this.currentLevel = new Levels("", 0, 0.0, 0.0, 0);
         ((Levels) this.currentLevel).addObserver(this);
     }
 
@@ -175,7 +176,7 @@ public class Game implements Observer {
      * @return the cumulative points
      */
     public int getCurrentPoints() {
-        return this.currentLevel.getCurrentPoints();
+        return this.currentAccumulatedScore;
     }
 
     /**
@@ -226,6 +227,8 @@ public class Game implements Observer {
             this.goNextLevel();
         } else if (action == 1) {
             this.myBalls += 1;
+        } else {
+            this.currentAccumulatedScore += action;
         }
     }
 }

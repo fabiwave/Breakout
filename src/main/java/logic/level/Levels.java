@@ -28,10 +28,10 @@ public class Levels extends Observable implements Level, Observer {
             Bricks aBrick;
 
             if (randomGenerator > probOfGlass) {
-                aBrick = new WoodenBrick(this);
+                aBrick = new WoodenBrick();
                 brickList.add(aBrick);
             } else {
-                aBrick = new GlassBrick(this);
+                aBrick = new GlassBrick();
                 brickList.add(aBrick);
             }
 
@@ -44,7 +44,7 @@ public class Levels extends Observable implements Level, Observer {
             MetalBrick aBrick;
 
             if (randomGenerator <= probOfMetal) {
-                aBrick = new MetalBrick(this);
+                aBrick = new MetalBrick();
                 brickList.add(aBrick);
                 aBrick.addObserver(this);
             }
@@ -83,7 +83,12 @@ public class Levels extends Observable implements Level, Observer {
 
     @Override
     public Level getNextLevel() {
-        return this.nextLevel;
+        if (!this.isPlayableLevel()){
+            return this;
+        }
+        else {
+            return this.nextLevel;
+        }
     }
 
     @Override
@@ -127,6 +132,8 @@ public class Levels extends Observable implements Level, Observer {
 
     public void addScore(int score) {
         this.currentPoints += score;
+        this.setChanged();
+        this.notifyObservers(score);
     }
 
     @Override

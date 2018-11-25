@@ -3,43 +3,109 @@
   <ID>JAVA</ID>
   <OriginalElement>logic</OriginalElement>
   <nodes>
-    <node x="480.49999999999994" y="0.0">logic.brick.Brick</node>
-    <node x="308.99999999999994" y="448.0">logic.brick.MetalBrick</node>
-    <node x="0.0" y="366.0">logic.level.Levels</node>
-    <node x="678.0" y="459.5">logic.brick.GlassBrick</node>
-    <node x="480.49999999999994" y="190.0">logic.brick.Bricks</node>
-    <node x="484.99999999999994" y="459.5">logic.brick.WoodenBrick</node>
-    <node x="25.5" y="0.0">logic.level.Level</node>
+    <node x="79.25000000000006" y="0.0">logic.brick.Brick</node>
+    <node x="113.5181818181818" y="791.0">logic.brick.MetalBrick</node>
+    <node x="54.67954545454546" y="946.0">logic.level.Levels</node>
+    <node x="456.5181818181818" y="802.5">logic.brick.GlassBrick</node>
+    <node x="327.0" y="556.0">logic.brick.Bricks</node>
+    <node x="288.5181818181818" y="802.5">logic.brick.WoodenBrick</node>
+    <node x="-223.41748526522593" y="627.7092337917485">logic.level.Level</node>
   </nodes>
   <notes />
   <edges>
+    <edge source="logic.brick.Bricks" target="logic.level.Level">
+      <point x="-45.5" y="-92.5" />
+      <point x="372.5" y="536.0" />
+      <point x="202.2" y="536.0" />
+      <point x="85.19999999999999" y="158.0" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.brick.MetalBrick">
+      <point x="-13.199999999999989" y="-258.0" />
+      <point x="173.47954545454547" y="926.0" />
+      <point x="152.2681818181818" y="926.0" />
+      <point x="-38.75" y="37.5" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.brick.GlassBrick">
+      <point x="92.40000000000003" y="-258.0" />
+      <point x="279.0795454545455" y="916.0" />
+      <point x="520.5181818181818" y="916.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
     <edge source="logic.brick.Bricks" target="logic.brick.Brick">
-      <point x="0.0" y="-104.0" />
+      <point x="45.5" y="-92.5" />
+      <point x="463.5" y="170.0" />
+      <point x="206.6500000000001" y="170.0" />
+      <point x="36.400000000000034" y="70.0" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.brick.WoodenBrick">
+      <point x="39.60000000000002" y="-258.0" />
+      <point x="226.27954545454548" y="896.0" />
+      <point x="362.0181818181818" y="896.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.brick.Bricks">
+      <point x="66.00000000000006" y="-258.0" />
+      <point x="252.67954545454552" y="906.0" />
+      <point x="446.0181818181818" y="906.0" />
+      <point x="446.0181818181818" y="766.0" />
+      <point x="440.75" y="766.0" />
+      <point x="22.75" y="92.5" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.brick.Brick">
+      <point x="-118.80000000000001" y="-258.0" />
+      <point x="67.87954545454545" y="926.0" />
+      <point x="0.0" y="926.0" />
+      <point x="0.0" y="160.0" />
+      <point x="97.45000000000005" y="160.0" />
+      <point x="-72.80000000000001" y="70.0" />
+    </edge>
+    <edge source="logic.level.Levels" target="logic.level.Level">
+      <point x="-65.99999999999994" y="-258.0" />
+      <point x="120.67954545454552" y="906.0" />
+      <point x="83.83409090909089" y="906.0" />
+      <point x="83.83409090909089" y="526.0" />
+      <point x="74.39999999999998" y="526.0" />
+      <point x="-42.60000000000002" y="158.0" />
+    </edge>
+    <edge source="logic.brick.Brick" target="logic.level.Level">
       <point x="0.0" y="70.0" />
+      <point x="53.25000000000006" y="-158.0" />
+    </edge>
+    <edge source="logic.brick.MetalBrick" target="logic.level.Level">
+      <point x="-38.75" y="-37.5" />
+      <point x="152.2681818181818" y="536.0" />
+      <point x="159.59999999999997" y="536.0" />
+      <point x="42.599999999999966" y="158.0" />
     </edge>
     <edge source="logic.brick.GlassBrick" target="logic.brick.Bricks">
       <point x="0.0" y="-26.0" />
-      <point x="755.0" y="423.0" />
-      <point x="632.1666666666665" y="423.0" />
-      <point x="60.66666666666663" y="104.0" />
+      <point x="520.5181818181818" y="766.0" />
+      <point x="486.25" y="766.0" />
+      <point x="68.25" y="92.5" />
+    </edge>
+    <edge source="logic.level.Level" target="logic.brick.Brick">
+      <point x="-53.24999999999994" y="-158.0" />
+      <point x="63.75000000000006" y="170.0" />
+      <point x="133.85000000000008" y="170.0" />
+      <point x="-36.39999999999998" y="70.0" />
     </edge>
     <edge source="logic.brick.MetalBrick" target="logic.brick.Bricks">
-      <point x="0.0" y="-37.5" />
-      <point x="386.99999999999994" y="423.0" />
-      <point x="510.8333333333333" y="423.0" />
-      <point x="-60.66666666666663" y="104.0" />
-    </edge>
-    <edge source="logic.level.Levels" target="logic.level.Level">
-      <point x="0.0" y="-258.0" />
-      <point x="0.0" y="158.0" />
+      <point x="38.75" y="-37.5" />
+      <point x="229.7681818181818" y="766.0" />
+      <point x="349.75" y="766.0" />
+      <point x="-68.25" y="92.5" />
     </edge>
     <edge source="logic.brick.WoodenBrick" target="logic.brick.Bricks">
       <point x="0.0" y="-26.0" />
-      <point x="0.0" y="104.0" />
+      <point x="362.0181818181818" y="766.0" />
+      <point x="395.25" y="766.0" />
+      <point x="-22.75" y="92.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="414.0000000000001" y="255.99999999999994" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.5643015521064302" x="403.0" y="611.0" />
+  <SelectedNodes>
+    <node>logic.level.Level</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>

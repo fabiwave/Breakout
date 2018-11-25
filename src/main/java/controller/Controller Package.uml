@@ -7,7 +7,7 @@
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="-133.75000000000023" y="386.7499999999999" />
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="-64.00000000000011" y="163.61904761904765" />
   <SelectedNodes>
     <node>controller.Game</node>
   </SelectedNodes>
