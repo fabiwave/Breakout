@@ -1,4 +1,4 @@
-# CC3002-breakout
+# Breakout
 
 ##
 
@@ -19,7 +19,24 @@
 ##### Esta es la parte logica del juego asi que no corre sola y se espera que para la proxima tarea esta sea la base para la implementacion de la interfaz grafica. 
 
 ### Relacionado a los Test
-##### En este projecto solo se encuentra un test, que es para la clase GlassBricks.
+##### En este projecto solo se encuentra un test, que es para la clase GlassBricks 
+##
 
-### Diagramas UML
-##### Ademas se incluyeron los diagramas UML de cada paquete, por si no se veian en buena calidad en el resumen entregado via U-cursos. 
+### Description of the implementation
+##### In this code, this is the logical implementation of the game Breakout.
+##### For this, the Levels, Game, Brick and HomeworkTwoFacade classes were implemented.
+##### Each one of these takes care of an aspect of the game, like the case of the bricks, that generates the basic units of the game. The levels implement another unit of the game that are the levels. And finally Game that is the largest unit that contains the other 2, which ensures that it has been a level or not, a game state and a content game. And at the same time you can change the level and win the game.
+
+
+
+### Design patterns used
+##### For the implementation of the previously mentioned classes, it is used as an Observer design pattern, which allows us to notify if it has been a change. This was necessary to be able to notify at the level that a brick was broken, and when this is applied to the corresponding effect. At the same time the level was also an observable object, which was necessary to warn a game when the level was finished for example or the points in the level.
+
+### How to run the program
+##### Java 8 is required for this program and to run the tests you need to import JUnit
+
+### Logical part of the game
+##### This is the logical part of the game so it is not correlated and the next task is not expected to be the basis for the implementation of the graphical interface.
+
+### Related to the Test
+##### In this project there is only one test, which is for the GlassBricks class
